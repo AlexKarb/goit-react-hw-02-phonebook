@@ -5,29 +5,29 @@
 
 .phonebook__button {
   width: 200px;
-  padding: 10px;
-
+  padding: 8px;
   background-image: linear-gradient(270deg, #ff00008c, #4b04ff8e);
   font-weight: 700;
-  font-size: 23px;
+  font-size: 20px;
   border: none;
   border-radius: 10px;
   box-shadow: 3px 3px 6px 1px #00000094;
 }
 
 .input {
-  font-size: 24px;
+  font-size: 18px;
   background-color: hsla(0, 61%, 83%, 0.425);
   border: none;
   border-radius: 10px;
   padding: 10px;
-  width: 320px;
+  width: 220px;
 }
 
 .input__label {
-  font-size: 28px;
+  font-size: 23px;
   text-transform: capitalize;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-bottom: 30px;
 }

@@ -2,8 +2,8 @@
   font-family: 'Courier New', Courier, monospace;
   font-size: 20px;
   width: 600px;
-  min-height: 380px;
-  padding: 50px 60px;
+  min-height: 350px;
+  padding: 40px 30px;
   margin: 20px;
   border: 1px solid rgb(94, 3, 3);
   border-radius: 10px;
@@ -11,7 +11,8 @@
 }
 
 .section_phonebook {
-  height: 380px;
+  height: 350px;
+  width: 400px;
 }
 
 .section__title {
@@ -24,7 +25,7 @@
 .section__title::after {
   content: '';
   display: inline-block;
-  width: 370px;
+  width: 80%;
   height: 3px;
   background-image: linear-gradient(270deg, #ff00008c, #4b04ff8e);
   position: absolute;
