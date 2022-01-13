@@ -1,0 +1,29 @@
+.contact__container {
+  display: flex;
+  align-items: center;
+}
+
+.contact__item {
+  font-size: 22px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.contact__item:last-child {
+  margin-bottom: 0;
+}
+
+.contact__icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 25px;
+}
+
+.contact__button {
+  margin-left: 3px;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+}

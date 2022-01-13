@@ -1,0 +1,33 @@
+.section {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+  width: 600px;
+  min-height: 380px;
+  padding: 50px 60px;
+  margin: 20px;
+  border: 1px solid rgb(94, 3, 3);
+  border-radius: 10px;
+  box-shadow: 3px 3px 4px rgb(177, 125, 125);
+}
+
+.section_phonebook {
+  height: 380px;
+}
+
+.section__title {
+  font-size: 32px;
+  font-style: italic;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.section__title::after {
+  content: '';
+  display: inline-block;
+  width: 370px;
+  height: 3px;
+  background-image: linear-gradient(270deg, #ff00008c, #4b04ff8e);
+  position: absolute;
+  bottom: -10px;
+  left: 0px;
+}
