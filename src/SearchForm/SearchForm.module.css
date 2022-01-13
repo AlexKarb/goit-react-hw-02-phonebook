@@ -1,5 +1,5 @@
 .searchForm {
-  font-size: 20px;
+  font-size: 16px;
   background-color: hsla(0, 61%, 83%, 0.425);
   border: none;
   border-radius: 8px;
@@ -14,5 +14,5 @@
   justify-content: space-between;
   margin-bottom: 30px;
   flex-direction: column;
-  height: 60px;
+  height: 70px;
 }
