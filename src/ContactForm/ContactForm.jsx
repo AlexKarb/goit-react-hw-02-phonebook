@@ -19,7 +19,12 @@ class ContactForm extends Component {
   };
 
   checkIsContactInBook = () => {
-    if (this.props.allContacts.find(({ name }) => name === this.state.name)) {
+    const normalizeName = this.state.name.toLowerCase();
+    if (
+      this.props.allContacts.find(
+        ({ name }) => name.toLowerCase() === normalizeName,
+      )
+    ) {
       alert(`${this.state.name} is already in contacts`);
     } else {
       this.props.onSubmit(this.state.name, this.state.number);
