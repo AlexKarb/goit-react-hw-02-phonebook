@@ -15,15 +15,8 @@
   margin-bottom: 0;
 }
 
-.contact__icon {
+.contact__photo {
   width: 40px;
   height: 40px;
   margin-right: 25px;
-}
-
-.contact__button {
-  margin-left: 3px;
-  background-color: #fff;
-  border: none;
-  cursor: pointer;
 }

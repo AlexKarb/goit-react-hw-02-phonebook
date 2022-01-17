@@ -1,7 +1,8 @@
 import { Component } from 'react';
-import Section from './Section/Section';
+import Section from './Utils/Section/Section';
 import ContactForm from './ContactForm/ContactForm';
 import ContactsList from './ContactsList/ContactsList';
+import Title from './Utils/Title/Title';
 import { nanoid } from 'nanoid';
 
 class App extends Component {
@@ -20,16 +21,16 @@ class App extends Component {
   };
 
   saveContact = (name, number) =>
-    this.setState({
-      contacts: [{ name, number, id: nanoid() }, ...this.state.contacts],
-    });
+    this.setState(prevState => ({
+      contacts: [{ name, number, id: nanoid() }, ...prevState.contacts],
+    }));
 
   deleteContact = id => {
-    this.setState({
-      contacts: this.state.contacts.filter(
+    this.setState(prevState => ({
+      contacts: prevState.contacts.filter(
         ({ id: contactId }) => contactId !== id,
       ),
-    });
+    }));
   };
 
   render() {
@@ -41,10 +42,12 @@ class App extends Component {
 
     return (
       <div className="container">
-        <Section title="Phonebook">
+        <Section type="Phonebook">
+          <Title title="Phonebook" />
           <ContactForm allContacts={contacts} onSubmit={this.saveContact} />
         </Section>
-        <Section title="Contacts">
+        <Section>
+          <Title title="Contacts" />
           <ContactsList
             filter={filter}
             filterContact={filterContact}

@@ -1,25 +1,26 @@
-import { IoMdContact } from 'react-icons/io';
-import { TiUserDelete } from 'react-icons/ti';
+import Button from '../Utils/Button/Button';
 import PropTypes from 'prop-types';
-
+import ContactData from './ContactData';
 import style from './Contact.module.css';
-const { contact__item, contact__icon, contact__button, contact__container } =
-  style;
+import { TiUserDelete } from 'react-icons/ti';
+import { IoMdContact } from 'react-icons/io';
+
+const { contact__item } = style;
 
 const Contact = ({ contacts, onDelete }) =>
   contacts.map(({ id, name, number }) => (
     <li key={id} className={contact__item}>
-      <div className={contact__container}>
-        <IoMdContact className={contact__icon} />
-        {name} : {number}
-      </div>
-      <button
+      <ContactData
+        name={name}
+        phone={number}
+        photo={<IoMdContact size={'100%'} />}
+      />
+      <Button
         type="button"
-        className={contact__button}
+        styleFor="delete"
         onClick={() => onDelete(id)}
-      >
-        <TiUserDelete />
-      </button>
+        text={<TiUserDelete />}
+      />
     </li>
   ));
 

@@ -1,7 +1,8 @@
+import Button from '../Utils/Button/Button';
 import style from './ContactForm.module.css';
 import PropTypes from 'prop-types';
 import { Component } from 'react';
-const { phonebook, phonebook__button, input__label, input } = style;
+const { phonebook, phonebook__label, phonebook__input } = style;
 
 class ContactForm extends Component {
   state = {
@@ -38,10 +39,10 @@ class ContactForm extends Component {
 
     return (
       <form onSubmit={this.saveContact} className={phonebook}>
-        <label className={input__label}>
+        <label className={phonebook__label}>
           Name
           <input
-            className={input}
+            className={phonebook__input}
             type="text"
             name="name"
             title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
@@ -51,10 +52,10 @@ class ContactForm extends Component {
             required
           />
         </label>
-        <label className={input__label}>
+        <label className={phonebook__label}>
           Number
           <input
-            className={input}
+            className={phonebook__input}
             type="tel"
             name="number"
             title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
@@ -64,9 +65,7 @@ class ContactForm extends Component {
             required
           />
         </label>
-        <button className={phonebook__button} type="submit">
-          Add contact
-        </button>
+        <Button type="submit" styleFor="submit" text={'Add contact'} />
       </form>
     );
   }
